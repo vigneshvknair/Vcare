@@ -58,15 +58,15 @@ else
                     <a class="hiddenanchor" id="tologin"></a>
                     <div id="wrapper">
                         <div id="login" class="animate form">
-                            <form method="post" action="php/signiny.php" autocomplete="on"> 
+                            <form method="post" action="php/signiny.php" autocomplete="on">
                                 <h1>Log in</h1>
                                 <p>
-                                    <label class="user" data-icon="u" > Your email or username </label>
-                                    <input name="user" required type="text" placeholder="myusername or mymail@mail.com"/>
+                                    <label class="user" data-icon="u" > Your email </label>
+                                    <input name="email" required type="text" placeholder="mymail@mail.com"/>
                                 </p>
                                 <p>
                                     <label class="pass" data-icon="p"> Your password </label>
-                                    <input name="pass" required type="password" value="" placeholder="eg. X8df!90EO" />
+                                    <input name="pass" value="Rashi123" required type="password" value="" placeholder="eg. X8df!90EO" />
                                 </p>
                                 <p class="keeplogin">
 									<input type="checkbox" name="loginkeeping" id="loginkeeping" value="loginkeeping" />
@@ -92,24 +92,33 @@ else
                                 <h1> Sign up </h1>
 
                                 <p>
-                                    <label class="name" data-icon="u">Your fullname</label>
-                                    <input name="name" required type="text" value="John" placeholder="John hamm" />
+                                    <label class="name" data-icon="u">Your First name</label>
+                                    <input name="fname" required type="text" value="John" placeholder="Mithila" />
+                                </p>
+                                <p>
+                                    <label class="name" data-icon="u">Your Last name</label>
+                                    <input name="lname" required type="text" value="John" placeholder="Singhal" />
                                 </p>
                                 <p>
                                     <label class="mail" data-icon="e" > Your email</label>
                                     <input name="email" required type="email" value="John@gmail.com" placeholder="mysupermail@mail.com"/>
                                 </p>
+                                <p>
+                                    <label class="phone" data-icon="u">Phone number</label>
+                                    <input name="phno" value="9920600788" required type="tel" minlength="10" maxlength="10" value="" placeholder="992054545" />
+                                </p>
                                  <p>
-                                    <label class="uname" data-icon="u">Your username</label>
-                                    <input name="user" required type="text" value="John" placeholder="username" />
+                                    <label class="uname" data-icon="u">Your Pet's name</label>
+                                    <input name="pname" required type="text" value="Cuddles" placeholder="Pet's Name" />
                                 </p>
                                 <p>
                                     <label class="youpasswd" data-icon="p">Your password </label>
-                                    <input name= "pass" title="Password must contain at least 6 characters, including UPPER/lowercase and numbers." required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"  type= "password" placeholder="eg. X8df!90EO"/>
+                                    <input name= "pass" value="Rashi123" title="Password must contain at least 6 characters, including UPPER/lowercase and numbers." required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}"  type= "password" placeholder="eg. X8df!90EO"/>
                                 </p>
+
                                 <p>
                                     <label class="youpasswd" data-icon="p">Please confirm your password </label>
-                                    <input name="cpass" title="Please enter the same Password as above." type="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" placeholder="eg. X8df!90EO"/>
+                                    <input name="cpass" value="Rashi123" title="Please enter the same Password as above." type="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}" placeholder="eg. X8df!90EO"/>
                                 </p>
 
 
