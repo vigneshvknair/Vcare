@@ -1,6 +1,7 @@
 <?php
 require "php/checklogin.php";
 
+
 if (isset($_GET['Message'])) {
     $msg=$_GET['Message'];
 }
@@ -16,7 +17,12 @@ else
 <!--[if (gt IE 9)|!(IE)]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
     <head>
 
+      <!--date links-->
+
+
+
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
 
 
 <!-- jQuery library -->
@@ -37,7 +43,9 @@ else
 		<link rel="stylesheet" type="text/css" href="css/login/loginanimate-custom.css" />
 
         <!-- Latest compiled and minified CSS -->
-
+        <script type="text/javascript" src="js/trans/moment.js"></script>
+        <link rel="stylesheet" type="text/css" href="CSS/trans/bootstrap-datetimepicker.min.css">
+        <script src="//cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/src/js/bootstrap-datetimepicker.js"></script>
     </head>
     <body>
         <div class="jumbotron" style="background-color: #80CBC4;">
@@ -64,7 +72,7 @@ else
 
 
 
-                            <form id="signupform" method="post" action="php/signup.php">
+                            <form id="signupform" method="post" action="php/petadd.php" enctype="multipart/form-data">
                                 <h1> Pet details </h1>
 
                                 <p>
@@ -72,16 +80,33 @@ else
                                     <input name="pname" required type="text" value="John" placeholder="Mithila" />
                                 </p>
                                 <p>
-                                    <label class="name" data-icon="u">Pet's age</label>
-                                    <input name="age" required type="text" value="John" placeholder="Singhal" />
+                                    <label class="name">Pet's age</label>
+                                            <div class="form-group">
+                                                <div class='input-group date' id='datetimepicker1'>
+                                                    <input type='text' name="date" id="date" class="form-control" />
+                                                    <span class="input-group-addon">
+                                                    <span class="glyphicon glyphicon-calendar"></span>
+                                                    </span>
+                                                </div>
+                                            </div>
+
+                                        <script type="text/javascript">
+                                            $(function () {
+                                              $('#datetimepicker1').datetimepicker({
+                                                    format: "YYYY/MM/DD ",
+
+                                                });
+                                            });
+                                        </script>
+
                                 </p>
                                 <p>
-                                    <label class="mail" data-icon="e" > Species</label>
+                                    <label class="name" > Species</label>
                                     <input name="species" required type="text" value="A cuddly dog" placeholder="Dog"/>
                                 </p>
                                 <p>
-                                    <label class="phone" data-icon="u"> Photo </label>
-                                  <input type="file" name="pic" accept="image/*">
+                                    <label class="phone"><span class="glyphicon glyphicon-camera" aria-hidden="true"></span> Photo </label>
+                                  <input type="file" name="fileToUpload" id="fileToUpload">
                                 </p>
                                  <p>
 
@@ -133,6 +158,7 @@ else
        div.style.visibility = 'hidden';
 
         </script>
+        <script type="text/javascript" src="js/sidebar.js"></script>
 
 
     </body>

@@ -74,10 +74,10 @@ if(isset($_POST['submit']))
  $query2 = mysql_query("SELECT * FROM websiteusers WHERE email = '$_POST[email]'") or die(mysql_error());
  $row = mysql_fetch_array($query2) or die(mysql_error());
  $id=$row['id'];
- echo $id;
+ $pname = $row['pname'];
 
-  if (!file_exists("Patients/$id")) {
-     mkdir("../Patients/$id", 0777, true);
+  if (!file_exists("Patients/$id/$pname")) {
+     mkdir("../Patients/$id/$pname", 0777, true);
  }
 	}
 

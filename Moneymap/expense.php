@@ -1,4 +1,4 @@
-<?php 
+<?php
 require "php/checklogin.php";
 ?>
 <html>
@@ -25,12 +25,13 @@ require "php/checklogin.php";
         <div class="row">
             <div class="jumbotron">
                 <h1 align=center>MoneyMap</h1>
-            </div>  
-        </div>  
+            </div>
+        </div>
+          <!-- Sidebar -->
         <div id="wrapper">
             <div class="overlay"></div>
-    
-            <!-- Sidebar -->
+
+
             <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
             <ul class="nav sidebar-nav">
                 <li class="sidebar-brand">
@@ -79,19 +80,19 @@ require "php/checklogin.php";
                          <form method="post" action="php/expenseset.php" >
                             <div class="row">
                                 <div class="form-group col-sm-offset-4 col-sm-4">
-                                    <div class="input-group">   
+                                    <div class="input-group">
                                         <div class="input-group-addon">Rs.</div>
                                         <input type="text" class="form-control" name="amount" id="amount" placeholder="Expense">
                                         <div class="input-group-addon">.00</div>
                                     </div>
-                                </div>   
-                            </div> 
+                                </div>
+                            </div>
                              <input type='hidden' id="cat" name="cat" value=""/>
-                            <div class="row"> 
+                            <div class="row">
                                 <div class="form-group col-sm-offset-4 col-sm-4">
-                                    
+
                                     <select class="form-control" id="category" name="category">
-                                    
+
                                         <option value="1">Food</option>
                                         <option value="2">Travel</option>
                                         <option value="3">Party</option>
@@ -126,9 +127,9 @@ require "php/checklogin.php";
                                 <button type="submit" class="btn btn-primary">Add Expense</button>
                             </div>
                         </form>
-                    </div>            
+                    </div>
                     <!--footer-->
-                    <div class="row">   
+                    <div class="row">
                         <div id="footer">
                             <p>Copyright © GareebiSolutions</p>
                         </div>
@@ -137,24 +138,24 @@ require "php/checklogin.php";
                 </div>
             </div>
             <!-- /#page-content-wrapper -->
-                  
+
         </div>
         <!-- /#wrapper -->
     </div>
-    <!--/#container-fluid-->    
+    <!--/#container-fluid-->
 <script type="text/javascript" src="js/sidebar.js"></script>
     
     <!--footer-->
     <div id="footer">
-		
+
 			<div id="connect">
 				<a href="https://www.facebook.com/vignesh.vk" target="_blank" class="button pulse"></a>
-			
+
 			</div>
 			<p>
 				© 2015 Moneymap. All Rights Reserved.
 			</p>
-		
+
 	</div>
     <!--footerend-->
 </body>
