@@ -1,0 +1,30 @@
+.animation-object {
+    width: 441px;
+    height: 313px;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    margin: 45 auto;
+}
+
+img {
+  width: auto;
+  height: auto;
+  display: inline-block;
+  position: relative;
+}
+    
+.animation-object__strip:nth-of-type(1){
+  width: 4851px;
+  display: block;
+  font-size: 0;
+  overflow: hidden;
+  position: relative;
+  -webkit-animation: intro 5s steps(11) infinite alternate;
+  animation: intro 2s steps(11) infinite alternate;
+}
+
+@-webkit-keyframes intro {
+   from { -webkit-transform:  translateX(0px); }
+     to { -webkit-transform:  translateX(-4851px); }
+}

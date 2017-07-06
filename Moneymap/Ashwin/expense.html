@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <!-- Sidebar links -->
+    <title>Expense</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="sidebar.css">
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <!--DONT USE col-md-4-->
+
+    <!--date links-->
+    <script type="text/javascript" src="moment.js"></script>
+    <link rel="stylesheet" type="text/css" href="bootstrap-datetimepicker.min.css">
+    <script type="text/javascript" src="bootstrap-datetimepicker.min.js"></script>
+
+</head>
+<body>
+    <div class="container-fluid" >
+        <div class="row">
+            <div class="jumbotron">
+                <h1 align=center>MoneyMap</h1>
+            </div>  
+        </div>  
+        <div id="wrapper">
+            <div class="overlay"></div>
+    
+            <!-- Sidebar -->
+             <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
+            <ul class="nav sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="homepage.html">
+                        MoneyMap
+                    </a>
+                </li>
+                <li>
+                    <a href="#">Edit Profile</a>
+                </li>
+                 <!--<li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">My Wallet<span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li class="dropdown-header">Dropdown heading</li>
+                    <li><a href="#">Balance</a></li>
+                    <li><a href="#">Expenditure</a></li>
+                    <li><a href="#">Savings</a></li>
+                  </ul>
+                </li>-->
+                <li>
+                    <a href="#">Balance</a>
+                </li>
+                <li>
+                    <a href="#">Expenditure</a>
+                </li>
+                <li>
+                    <a href="../budgetset.php">Savings</a>
+                </li>
+                <li>
+                    <a href="#">Contact</a>
+                </li>
+                <li>
+                    <a href="#">Log Out</a>
+                </li>
+            </ul>
+            </nav>
+            <!-- /#sidebar-wrapper -->
+            <!-- Page Content -->
+            <div id="page-content-wrapper">
+                <button type="button" class="hamburger is-closed" data-toggle="offcanvas">
+                   <span class="hamb-top"></span>
+        	   	   <span class="hamb-middle"></span>
+    	   		   <span class="hamb-bottom"></span>
+                </button>
+                <div class="container">
+                    <div class="row bord">
+                        <form>
+                            <div class="row">
+                                <div class="form-group col-sm-offset-3 col-sm-6">
+                                    <div class="input-group">   
+                                        <div class="input-group-addon">₹</div>
+                                        <input type="text" class="form-control" id="expense" placeholder="Expense">
+                                        <div class="input-group-addon">.00</div>
+                                    </div>
+                                </div>   
+                            </div>    
+                            <div class="row"> 
+                                <div class="form-group col-sm-offset-3 col-sm-6">
+                                    <select class="form-control" id="category" name="category">
+                                        <option>Category</option>
+                                        <option>Food</option>
+                                        <option>Travel</option>
+                                        <option>Party</option>
+                                        <option>#</option>
+                                        <option>Miscellaneous</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <p>
+                            <div class="row">
+                                <div class="col-sm-3"></div>
+                                <div class='col-sm-6'>
+                                    <div class="form-group">
+                                        <div class='input-group date' id='datetimepicker1'>
+                                            <input type='text' class="form-control" />
+                                            <span class="input-group-addon">
+                                            <span class="glyphicon glyphicon-calendar"></span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <script type="text/javascript">
+                                    $(function () {
+                                        $('#datetimepicker1').datetimepicker({
+                                            format: "DD/MM/YYYY LT"
+                                        });
+                                    });
+                                </script>
+                            </div>
+                            </p>
+                            <div class="form-group col-sm-offset-4 col-sm-4">
+                                <button type="submit" class="btn btn-default">Add Expense</button>
+                            </div>
+                        </form>
+                    </div>            
+                    <!--footer-->
+                    <div class="row">   
+                        <div id="footer">
+                            <p>Copyright © GareebiSolutions</p>
+                        </div>
+                    </div>
+                    <!--/footer-->
+                </div>
+            </div>
+            <!-- /#page-content-wrapper -->
+                  
+        </div>
+        <!-- /#wrapper -->
+    </div>
+    <!--/#container-fluid-->    
+<script type="text/javascript" src="sidebar.js"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+
+#footer{
+	height: 30px;
+	clear:both;
+	background-color:#006064;
+	padding: 5px;
+	color:white;
+	text-align: center;
+	position: absolute;
+  	bottom: 0px;
+  	width: 100%;
+  	margin: 2px;
+}
+
+
+.jumbotron{
+	background-color: #80CBC4!important;
+}
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+      width: 70%;
+      margin: auto;
+  }

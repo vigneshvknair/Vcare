@@ -1,0 +1,13 @@
+@font-face {
+	font-family: "Captain America"; 
+	src: url('http://static.tumblr.com/npggxjg/Pn5mdpggw/american_captain.ttf');
+}
+
+ @font-face {
+	font-family: "Rolina"; 
+	src: url("http://static.tumblr.com/npggxjg/P3om22rj5/rolina.ttf");
+ }
+
+   .font{
+  	font-family: Rolina!important;
+  }
