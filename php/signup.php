@@ -26,7 +26,7 @@ function NewUser()
 
 
 
- $query = "INSERT INTO websiteusers (fname,lname,pname,phno,email,pass) VALUES ('$fname','$lname','$pname','$phno','$email','$password')";
+ $query = "INSERT INTO websiteusers (fname,lname,pname,phno,email,pass,visitno) VALUES ('$fname','$lname','$pname','$phno','$email','$password',0)";
  mysql_query($query);
 
 
@@ -80,6 +80,6 @@ if(isset($_POST['submit']))
      mkdir("../Patients/$id/$pname", 0777, true);
  }
 	}
-
-
+$Message="Signup successful";
+header("Location:../login.php?Message=" . urlencode($Message));
  ?>

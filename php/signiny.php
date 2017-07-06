@@ -21,11 +21,32 @@ function SignIn() {
                     if(!empty($row['email']) AND !empty($row['pass']))
                     {
 
+                        $id=$row['id'];
                         $_SESSION['id'] = $row['id'];
                         $_SESSION['fname']= $row['fname'];
 
-                        echo "SUCCESSFULLY LOGIN TO USER PROFILE PAGE...";
-                        //header("location: ../homepage.php");
+                        //echo "SUCCESSFULLY LOGIN TO USER PROFILE PAGE...";
+                        $visitno=$row['visitno'];
+                        echo $visitno;
+                        if ($visitno==0)
+                        {
+
+                          $visitno=$visitno+1;
+                          $query2 ="UPDATE `websiteusers` SET `visitno`=$visitno where `id`='$id'";
+                          mysql_query($query2);
+                          header("location: ../petform.php");
+                        }
+
+                        else
+                        {
+
+                          $visitno=$visitno+1;
+                          $query2 ="UPDATE `websiteusers` SET `visitno`=$visitno where `id`='$id'";
+                          mysql_query($query2);
+
+                          	header("Location:../login.php?Message=" . urlencode($visitno));
+
+                        }
 
                     }
 
