@@ -1,18 +1,18 @@
 <?php
-define('DB_HOST', 'localhost'); 
-define('DB_NAME', 'moneymap'); 
+define('DB_HOST', 'localhost');
+define('DB_NAME', 'vcare');
 define('DB_USER','root');
-define('DB_PASSWORD',''); 
+define('DB_PASSWORD','');
 
-$con=mysql_connect(DB_HOST,DB_USER,DB_PASSWORD) or die("Failed to connect to MySQL: " . mysql_error()); 
+$con=mysql_connect(DB_HOST,DB_USER,DB_PASSWORD) or die("Failed to connect to MySQL: " . mysql_error());
 
-$db=mysql_select_db(DB_NAME,$con) or die("Failed to connect to MySQL: " . mysql_error()); 
+$db=mysql_select_db(DB_NAME,$con) or die("Failed to connect to MySQL: " . mysql_error());
 
 session_start();
     if(!empty($_SESSION['id']))
        {
            $id=$_SESSION['id'];
-           $fname=$_SESSION['name'];
+           $fname=$_SESSION['fname'];
        }
        else
        {
@@ -20,6 +20,6 @@ session_start();
            die(mysql_error());
             header("location: ../login.html");
            exit;
-          
+
        }
 ?>

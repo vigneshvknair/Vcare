@@ -12,7 +12,9 @@ function SignIn() {
 
                    if(!empty($_POST['email']))
                        //checking the 'user' name which is from Sign-In.html, is it empty or have some text
-                   { $query = mysql_query("SELECT * FROM websiteusers where email='$_POST[email]' AND pass = '$password'") or die(mysql_error());
+                   {
+
+                      $query = mysql_query("SELECT * FROM websiteusers where email='$_POST[email]' AND pass = '$password'") or die(mysql_error());
 
                     $row = mysql_fetch_array($query) or die(mysql_error());
 
